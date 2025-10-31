@@ -11,7 +11,7 @@ const Login = () => {
     const [password,setPassword] = useState("");
     const [loadingapi, setLoadingAPI] = useState(false);
     const loginapi = (phone,password) => {  
-        return axios.post('https://localhost:7139/api/Login',{phone,password});
+        return axios.post(`${image}/api/Login`,{phone,password});
     }
     const {loginContext} = useContext(UserContext);
     
