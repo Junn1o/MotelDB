@@ -396,6 +396,52 @@
   background: transparent;
 }
 
+/* Form Controls */
+.form-checkbox {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius);
+  background: var(--bg-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+}
+
+.form-checkbox:checked {
+  background: var(--primary-blue);
+  border-color: var(--primary-blue);
+}
+
+.form-checkbox:checked::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.form-checkbox:hover {
+  border-color: var(--primary-blue);
+}
+
+.form-checkbox:focus {
+  outline: 2px solid var(--primary-blue-200);
+  outline-offset: 2px;
+}
+
+.form-checkbox:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .modern-table-header {
@@ -464,6 +510,16 @@
   color: var(--gray-600);
 }
 
+[data-theme="dark"] .form-checkbox {
+  border-color: var(--border-medium);
+  background: var(--bg-primary);
+}
+
+[data-theme="dark"] .form-checkbox:checked {
+  background: var(--primary-blue);
+  border-color: var(--primary-blue);
+}
+
 /* Animation Enhancements */
 .animate-fade-in {
   animation: fadeIn 0.3s ease-out;
@@ -513,4 +569,127 @@
     rgba(245, 158, 11, 0.05) 0%, 
     transparent 100%) !important;
   border-left: 3px solid var(--warning);
+}
+
+/* Avatar Styles */
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--primary-blue-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-xs);
+  font-weight: var(--font-semibold);
+  color: var(--primary-blue-700);
+  border: 2px solid var(--primary-blue-200);
+  transition: all var(--transition-fast);
+}
+
+.user-avatar:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow);
+}
+
+/* Truncate Text Utilities */
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Highlight Row Selection */
+.modern-table-row.selected {
+  background: rgba(59, 130, 246, 0.08) !important;
+  border-left: 4px solid var(--primary-blue);
+}
+
+.modern-table-row.selected:hover {
+  background: rgba(59, 130, 246, 0.12) !important;
+}
+
+/* Enhanced Card for Role Management */
+.role-management-card {
+  background: linear-gradient(135deg, 
+    var(--primary-blue-50) 0%, 
+    var(--bg-primary) 100%);
+  border: 1px solid var(--primary-blue-200);
+}
+
+.role-management-card .card-body {
+  position: relative;
+}
+
+.role-management-card .card-body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    var(--primary-blue) 0%, 
+    var(--primary-blue-dark) 100%);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+/* Selection Info Panel */
+.selection-info {
+  background: rgba(59, 130, 246, 0.05);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.selection-info p {
+  margin: 0;
+  color: var(--primary-blue-700);
+  font-size: var(--font-sm);
+}
+
+/* Enhanced Mobile Experience */
+@media (max-width: 640px) {
+  .modern-table-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .modern-table-actions > div {
+    justify-content: center;
+  }
+  
+  .form-input {
+    width: 100% !important;
+  }
+  
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .pagination-controls {
+    gap: var(--space-1);
+  }
+  
+  .pagination-item {
+    min-width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
 }
