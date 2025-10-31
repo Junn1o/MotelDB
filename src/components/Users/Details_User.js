@@ -74,7 +74,7 @@ const DetailsUser = () => {
     if (actualFile && typeof actualFile === 'string') {
       // Xử lý actualFile để đảm bảo định dạng đúng
       const cleanedUrl = actualFile.split(';')[0];
-      return `https://localhost:7139/${cleanedUrl}`;
+      return `${image}/${cleanedUrl}`;
     } else {
       // Handle the case where actualFile is null or not a string
       console.error("Invalid actualFile:", actualFile);
