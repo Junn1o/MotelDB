@@ -32,7 +32,9 @@ jobs:
       run: |
         docker stop motel-dashboard || true
         docker rm motel-dashboard || true
-        echo "Value: $REACT_APP_API_URL"
+        echo "Secret exists: ${{ secrets.REACT_APP_API_URL != '' }}"
+        echo "Secret length: ${#REACT_APP_API_URL}"
+        echo "Is empty: $([ -z '$REACT_APP_API_URL' ] && echo 'YES' || echo 'NO')"
         
     - name: Build Docker image
       run: docker build -t react-app:latest .
