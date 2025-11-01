@@ -1,6 +1,5 @@
     import React, { useEffect, useState, useRef } from 'react';
     import { Line } from 'react-chartjs-2';
-    import axios from 'axios';
     import { getAll } from '../../api/api';
     import { Chart, LinearScale, CategoryScale, PointElement, LineElement } from 'chart.js';
 

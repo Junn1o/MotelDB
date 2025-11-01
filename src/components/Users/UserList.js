@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { image } from '../../constants/URL'
 import { Link } from 'react-router-dom';
 function UserList({ users, handleEdit, handleDelete }) {
-    const [loadingapi, setLoadingAPI] = useState(true);
-    const [path, setPath] = useState(localStorage.getItem('path'));
+    const [loadingapi, ___setLoadingAPI] = useState(true);
+    const [_path, setPath] = useState(localStorage.getItem('path'));
     const handleDeletePath = () => {
         setPath(localStorage.removeItem('path'));
     };

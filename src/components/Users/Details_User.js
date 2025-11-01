@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, NavLink, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { detailUser } from '../../api/api';
 import moment from 'moment';
 import { image } from '../../constants/URL'
@@ -69,7 +69,7 @@ const DetailsUser = () => {
     
     return 'Không xác định';
   };
-  const getImageUrl = (actualFile) => {
+  const _getImageUrl = (actualFile) => {
     // Check if actualFile is not null before splitting
     if (actualFile && typeof actualFile === 'string') {
       // Xử lý actualFile để đảm bảo định dạng đúng
