@@ -9,7 +9,6 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import { putApprovePost } from '../../api/api';
-import { Container } from 'postcss';
 
 function ApprovePost({ open, handleClose, rowData }) {
     const { user } = useContext(UserContext);

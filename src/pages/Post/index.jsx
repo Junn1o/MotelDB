@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import PostTable from '../../components/Post/PostTable';
+import React from 'react';
 import DataGridPost from '../../components/Post/DataGridPost';
 import DashboardHeader from '../../components/DashboardHeader';
 import Container from '@mui/material/Container';

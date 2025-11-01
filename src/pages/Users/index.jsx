@@ -3,13 +3,11 @@ import DashboardHeader from '../../components/DashboardHeader';
 import { toast } from 'react-toastify';
 import '../styles.css';
 import { getUsers, getTiers, getRoles, updateUser, deleteUser } from '../../api/api';
-import axios from 'axios';
 import ConfirmationModal from '../../components/Users/ConfirmationModal'
 import UserList from '../../components/Users/UserList'
 import UserForm from '../../components/Users/UserForm'
 import Pagination from '../../components/Users/Pagination'
 import Button from '@mui/material/Button';
-import { debounce } from 'lodash';
 import { CSVLink } from 'react-csv';
 import { TextField } from '@mui/material';
 
