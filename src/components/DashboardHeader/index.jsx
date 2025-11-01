@@ -1,8 +1,6 @@
 import React from 'react';
 import {image} from '../../constants/URL'
 import './styles.css';
-import NotificationIcon from '../../assets/icons/notification.svg';
-import SettingsIcon from '../../assets/icons/settings.svg';
 import { useContext } from 'react';
 import { UserContext } from '../../context/UserContext';
 function DashboardHeader ({ btnText, onClick }) {
