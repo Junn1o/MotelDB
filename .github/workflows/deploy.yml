@@ -39,7 +39,7 @@ jobs:
     - name: Run new container
       run: |
         docker run -d \
-          --name motel dashboard \
+          --name motel-dashboard \
           --restart unless-stopped \
           -p 3000:3000 \
           react-app:latest
