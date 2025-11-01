@@ -32,6 +32,7 @@ jobs:
       run: |
         docker stop motel-dashboard || true
         docker rm motel-dashboard || true
+        echo ${{ secrets.REACT_APP_API }}
         
     - name: Build Docker image
       run: docker build -t react-app:latest .
