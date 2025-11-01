@@ -30,8 +30,8 @@ jobs:
         
     - name: Stop existing container
       run: |
-        docker stop react-app || true
-        docker rm react-app || true
+        docker stop motel-dashboard || true
+        docker rm motel-dashboard || true
         
     - name: Build Docker image
       run: docker build -t react-app:latest .
