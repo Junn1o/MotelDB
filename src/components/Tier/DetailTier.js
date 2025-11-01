@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, NavLink, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { detailTier } from '../../api/api';
 import { image } from '../../constants/URL'
 import { UserContext } from '../../context/UserContext';

@@ -3,7 +3,6 @@ import DashboardHeader from '../../components/DashboardHeader';
 import { toast } from 'react-toastify';
 import '../styles.css';
 import {  getTiers, updateTier, deleteTier } from '../../api/api';
-import axios from 'axios';
 import ConfirmationModal from '../../components/Users/ConfirmationModal'
 import TierList from '../../components/Tier/TierList'
 import TierForm from '../../components/Tier/TierForm'
@@ -12,7 +11,7 @@ function Users() {
     const [currentPage, setCurrentPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
     // const [totalUsers, settotalUsers] = useState(0);
-    const [search, setSearch] = useState('');
+    const [search, ___setSearch] = useState('');
     const [editingTier, setEditingTier] = useState(null);
     const [isEditing, setIsEditing] = useState(false);
     const [tiers, setTiers] = useState([]);
