@@ -1,10 +1,10 @@
-import React, { useState ,useEffect} from 'react'
+import React, { useState} from 'react'
 import axios from 'axios';
 import { toast } from 'react-toastify';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { UserContext } from '../../context/UserContext';
-import { API_BASE_URL } from '../../constants/URL';
+import { image } from '../../constants/URL';
 const Login = () => {
     const navigate = useNavigate();
     const [phone, setPhone] = useState("");
