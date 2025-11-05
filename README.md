@@ -1,6 +1,6 @@
 # Motel Admin Dashboard
 
-A comprehensive admin dashboard for managing motel operations, built with ReactJS, Material-UI, and Tailwind CSS. This application provides a user-friendly interface for hotel administrators to manage rooms, customers, and other essential motel operations.
+A comprehensive admin dashboard for managing motel operations, built with ReactJS, Material-UI, and Tailwind CSS. This application provides a user-friendly interface for motel administrators to manage rooms, customers, and other essential motel operations.
 
 ## 🌟 Features
 
